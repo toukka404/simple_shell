@@ -3,7 +3,7 @@
 /**
 * _erratoi - converts a string to an integer
 * @s: the string to be converted
-* Return: 0 if no numbers in string, converted number otherwise
+* return: 0 if no numbers in string, converted number otherwise
 *       -1 on error
 */
 int _erratoi(char *s)
@@ -32,7 +32,7 @@ return (result);
 * print_error - prints an error message
 * @info: the parameter & return info struct
 * @estr: string containing specified error type
-* Return: 0 if no numbers in string, converted number otherwise
+* return: 0 if no numbers in string, converted number otherwise
 *        -1 on error
 */
 void print_error(info_t *info, char *estr)
@@ -51,7 +51,7 @@ _eputs(estr);
 * @input: the input
 * @fd: the filedescriptor to write to
 *
-* Return: number of characters printed
+* return: number of characters printed
 */
 int print_d(int input, int fd)
 {
@@ -60,7 +60,7 @@ int i, count = 0;
 unsigned int _abs_, current;
 
 if (fd == STDERR_FILENO)
-__putchar = _eputchar;
+_putchar = _eputchar;
 if (input < 0)
 {
 _abs_ = -input;
@@ -91,7 +91,7 @@ return (count);
 * @base: base
 * @flags: argument flags
 *
-* Return: string
+* return: string
 */
 char *convert_number(long int num, int base, int flags)
 {
@@ -125,7 +125,7 @@ return (ptr);
 * remove_comments - function replaces first instance of '#' with '\0'
 * @buf: address of the string to modify
 *
-* Return: Always 0;
+* return: Always 0;
 */
 void remove_comments(char *buf)
 {
