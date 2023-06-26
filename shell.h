@@ -12,22 +12,22 @@
 #include <fcntl.h>
 #include <errno.h>
 
-/* for read/write buffers */
+/* for read/write buffers*/
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
 
-/* for command chaining */
+/* for command chaining*/
 #define CMD_NORM	0
 #define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
 
-/* for convert_number() */
+/* for convert_number()*/
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
-/* 1 if using system getline() */
+/* 1 if using system getline()*/
 #define USE_GETLINE 0
 #define USE_STRTOK 0
 
@@ -88,7 +88,6 @@ typedef struct passinfo
 	char **environ;
 	int env_changed;
 	int status;
-
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
@@ -131,11 +130,13 @@ int _eputchar(char);
 int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
 
+
 /* toem_string.c */
 int _strlen(char *);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);
+
 
 /* toem_string1.c */
 char *_strcpy(char *, char *);
@@ -143,19 +144,23 @@ char *_strdup(const char *);
 void _puts(char *);
 int _putchar(char);
 
+
 /* toem_exits.c */
 char *_strncpy(char *, char *, int);
 char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
 
+
 /* toem_tokenizer.c */
 char **strtow(char *, char *);
 char **strtow2(char *, char);
+
 
 /* toem_realloc.c */
 char *_memset(char *, char, unsigned int);
 void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
+
 
 /* toem_memory.c */
 int bfree(void **);
