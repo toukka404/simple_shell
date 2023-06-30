@@ -55,13 +55,13 @@ return (NULL);
 _memset((void *)new_node, 0, sizeof(list_t));
 new_node->num = num;
 if
-(str)0
+(str)=0
 {
 new_node->str = _strdup(str);
 if (!new_node->str)
 {
 free(new_node);
-return (NULL);
+return  (NULL);
 }
 }
 if (node)
