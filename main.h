@@ -29,4 +29,5 @@ void memry_freed(char **cmds);
 int changes_directories(const char *paths);
 void child_process(char **cmds, char *names, char **env, int cycle);
 char **tokenizing(char *buffers, const char *strings);
+int mysetenv(char **args, __attribute__((unused)) char *input);
 #endif
